@@ -15,7 +15,7 @@ export default function NavegadorAbas() {
           ),
         }}
       >
-        {() => <NavegadorPilha noticias={noticiasTecnologia} />}
+        {() => <NavegadorPilha noticias={noticiasTecnologia} titulo="Tecnologia" />}
       </Abas.Screen>
 
       <Abas.Screen
@@ -26,7 +26,7 @@ export default function NavegadorAbas() {
           ),
         }}
       >
-        {() => <NavegadorPilha noticias={noticiasEsportes} />}
+        {() => <NavegadorPilha noticias={noticiasEsportes} titulo="Esportes"  />}
       </Abas.Screen>
     </Abas.Navigator>
   );

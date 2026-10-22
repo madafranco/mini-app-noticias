@@ -8,6 +8,12 @@ export default function ListaNoticias({ route, navigation }) {
     <FlatList
       data={noticias}
       keyExtractor={(item) => item.id}
+      contentContainerStyle={{
+        maxWidth: 800,
+        width: '100%',
+        alignSelf: 'center',
+        paddingVertical: 8,
+      }}
       renderItem={({ item }) => (
         <CardNoticia
           noticia={item}

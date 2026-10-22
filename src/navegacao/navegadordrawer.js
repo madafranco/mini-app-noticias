@@ -2,12 +2,20 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { Ionicons } from '@expo/vector-icons';
 import NavegadorAbas from './navegadorabas';
 import Sobre from '../telas/sobre';
+import BotaoTema from '../componentes/botaotema';
+import { fonteTitulo } from '../tema';
 
 const Menu = createDrawerNavigator();
 
 export default function NavegadorDrawer() {
   return (
-    <Menu.Navigator>
+    <Menu.Navigator
+      screenOptions={{
+        headerRight: () => <BotaoTema />,
+        headerTitleStyle: { fontFamily: fonteTitulo, fontSize: 22 },
+        drawerLabelStyle: { fontFamily: fonteTitulo, fontSize: 16 },
+      }}
+    >
       <Menu.Screen
         name="Noticias"
         component={NavegadorAbas}
